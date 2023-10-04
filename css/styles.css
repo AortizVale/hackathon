@@ -9,3 +9,25 @@
 .crecer-letra {
     font-size: 2em
 }
+
+.crecer-uno {
+    font-size: 1.5em
+}
+
+.fondo-azul {
+    background-color: #00abbc;
+}
+
+.fondo-azul-oscuro{
+    background-color: #0A1469;
+}
+
+.navbar{
+    background-color: #00abbc !important;
+}
+
+.navbar-text,
+.navbar-brand,
+.nav-link{
+    color: white !important;
+}

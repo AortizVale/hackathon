@@ -8,51 +8,76 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
     <title>Llamado a pacientes</title>
+
 </head>
 
-<body class="fondo-oscuro">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-                        <img src="img/logo_naranja.png" alt="Bootstrap" width="150">
-                    </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
+<body class="fondo-azul-oscuro">
+    <ul class="nav justify-content-center fondo-azul">
+        <li class="nav-item">
+        <div class="container-fluid ">
+            <a class="navbar-brand center" href="#">
+                <img src="img/logo-dark-omimed-2x.webp" alt="logo" width="250">
+            </a>
         </div>
-    </nav>
+        </li>
+    </ul>
+    <br>
     <div class="container">
         <div class="row">
+            
+            <div class="col-md-7">
+                <table class="table table-striped ">
+                    <thead>
+                        <tr class="crecer-letra">
+                            <th scope="col">Paciente</th>
+                            <th scope="col">Consultorio</th>
+                            <th scope="col">Médico</th>
+                        </tr>
+                    </thead>
+                    <tbody class="crecer-uno">
+                        <tr class="table-success">
+                            <td>Paulina Ortega</td>
+                            <td>Consultorio 5</td>
+                            <td>Antonio Díaz</td>
+                        </tr>
+                        <tr>
+                            <td>Nelson Jaimes</td>
+                            <td>Consultorio 6</td>
+                            <td>Sandra Sarmiento</td>
+                        </tr>
+                        <tr>
+                            <td>Juan García</td>
+                            <td>Terapia</td>
+                            <td>Ana Rodríguez</td>
+                        </tr>
+                        <tr>
+                            <td>Carlos Pérez</td>
+                            <td>Consultorio 2</td>
+                            <td>Laura Martínez</td>
+                        </tr>
+                        <tr>
+                            <td>Isabel Silva</td>
+                            <td>Consultorio 3</td>
+                            <td>Diego Fernández</td>
+                        </tr>
+                        <tr>
+                            <td>Pedro Sánchez</td>
+                            <td>Consultorio 1</td>
+                            <td>María López</td>
+                        </tr>
+                        <tr>
+                            <td>Alejandro González</td>
+                            <td>Consultorio 4</td>
+                            <td>Andrea Fernández</td>
+                        </tr>
+                        <tr>
+                            <td>Luis Torres</td>
+                            <td>Consultorio 7</td>
+                            <td>Elena Ramírez</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <div class="col-md-5">
 
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="true">
@@ -76,34 +101,6 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-            </div>
-            <div class="col-md-7 fondo-claro">
-                <table class="table table-dark table-bordered border-primary crecer-letra">
-                    <thead>
-                        <tr>
-                            <th scope="col">Paciente</th>
-                            <th scope="col">Consultorio</th>
-                            <th scope="col">Médico</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Paulina Ortega</td>
-                            <td>Consultorio 5</td>
-                            <td>Antonio Díaz</td>
-                        </tr>
-                        <tr>
-                            <td>Nelson Jaimes</td>
-                            <td>Consultorio 6</td>
-                            <td>Sandra Sarmiento</td>
-                        </tr>
-                        <tr>
-                            <td>Andrea Martinez</td>
-                            <td>Terapia</td>
-                            <td>Dante Vanegas</td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
         </div>
     </div>
