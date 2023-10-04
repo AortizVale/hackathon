@@ -1,0 +1,11 @@
+.fondo-oscuro {
+    background-color: black;
+}
+
+.fondo-claro {
+    background-color: beige;
+}
+
+.crecer-letra {
+    font-size: 2em
+}
