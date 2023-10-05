@@ -49,6 +49,7 @@
                 <br>
             </div>
         </div>
+
         <br>
         <?php
         $conn = mysqli_connect('localhost', 'root', '', 'test1') or die("Connectionn Failed:" . mysqli_connect_error());
@@ -56,6 +57,7 @@
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
+
 
         $sql_prioridad = "SELECT nombres, apellidos, consultorio, hora_cita, prioridad, estado, email FROM pacientes WHERE estado =0 ORDER BY prioridad = 'No prioritario', hora_cita";
         $result = $conn->query($sql_prioridad);
@@ -77,8 +79,9 @@
                     <div class='col'>
                         " . $row["prioridad"] . "
                     </div>
+                    
                     <div class='col'>
-                        <button type='button' class='btn btn-success'>Llamar</button>
+                        <button id='botonllamar' type='button' class='btn btn-success'>Llamar</button>
                     </div>
                     <div class='col'>
                         <button type='button' class='btn btn-danger'>Quitar</button>
@@ -86,13 +89,25 @@
                     </div>
                     </div>
                     <br>";
-                
+                }
+
             }
         } else {
             echo "0 results";
         }
         $conn->close();
+
+
+
+
+
         ?>
+        <script>
+            document.getElementById("botonllamar").addEventListener("click", function() {
+                // Llama a la función para enviar el correo al hacer clic en el botón
+                enviarCorreo();
+            });
+        </script>
 
 
 

@@ -14,7 +14,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['registro-paciente'])) 
         $consultorio = $_POST['consultorio'];
         $prioridad = $_POST['prioridad'];
 
+
         $sql = "INSERT INTO pacientes (nombres, apellidos, tipo_doc, num_doc, direccion, email, celular, fecha_creado, hora_cita, consultorio, prioridad, estado) VALUES ('$nombres', '$apellidos', '$tipo_doc', '$num_doc', '$direccion', '$email', '$celular', NOW(), '$hora_cita', '$consultorio', '$prioridad',0)";
+
 
         $query = mysqli_query($conn, $sql);
         if ($query) {

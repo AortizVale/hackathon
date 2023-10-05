@@ -85,7 +85,6 @@
             </div>
 
 
-
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
@@ -118,8 +117,10 @@
 
 
             <br>
+
             <button type="Cancel" class="btn btn-danger"> Cancelar</button>
             <button type="submit" class="btn btn-success" id="registro-paciente"  name="registro-paciente">Registrar</button>
+
         </form>
     </div>
 
