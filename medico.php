@@ -12,6 +12,9 @@
 </head>
 
 <body class="fondo-gris">
+
+
+
     <ul class="nav justify-content-center fondo-azul">
         <li class="nav-item">
             <div class="container-fluid ">
@@ -21,47 +24,71 @@
             </div>
         </li>
     </ul>
-    
     <br>
     <br>
-    <div class="container-text-center">
-        <div class="row">
-            <div class="col">
+    <div class='container-text-center'>
+        <div class='row'>
+            <div class='col'>
                 Paciente
                 <br>
-                <br>
-                Pedrito Martinez
-                <?php
-                
-                ?>
-
             </div>
-            <div class="col">
-                Turno
+            <div class='col'>
+                Hora
                 <br>
-                <br>
-
-                A01
-
             </div>
-            <div class="col">
-                Llamar 
+            <div class='col'>
+                Llamar
                 <br>
-                <br>
-                <button type="button" class="btn btn-success">Llamar</button>
             </div>
+            <div class='col'>
+                Quitar
+                <br>
+            </div>
+        </div>
 
-            <div  class= "col">
-                Quitar 
-                <br>
-                <br>
-                <button type="button" class="btn-btn-danger">Quitar</button>
+        <?php
+        $conn = mysqli_connect('localhost', 'root', '', 'test1') or die("Connectionn Failed:" . mysqli_connect_error());
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        $sql = "SELECT nombres, apellidos, consultorio, hora_cita FROM pacientes";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                echo "<div class='container-text-center'>
+            <div class='row'>
+                <div class='col'>
+                    " . $row["nombres"] . " " . $row["apellidos"] . "
+                </div>
+                <div class='col'>
+                " . $row["hora_cita"] . "
+            </div>
+            <div class='col'>
+                <button type='button' class='btn btn-success'>Llamar</button>
+            </div>
+            <div class='col'>
+                <button type='button' class='btn btn-danger'>Quitar</button>
             </div>
         </div>
     </div>
+    <br>
+";
+            }
+        } else {
+            echo "0 results";
+        }
+        $conn->close();
+        ?>
 
-    
-    <img class="soporteimagen" src="img/soporte.png"  alt="soporteimagen" >
+
+
+
+
+        <img class="soporteimagen" src="img/soporte.png" alt="soporteimagen">
 
 </body>
 
