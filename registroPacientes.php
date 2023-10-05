@@ -61,24 +61,30 @@
             </div>
 
             <div class="form-group">
-                <label for="direccion">Dirección:</label>
-                <input type="text" class="form-control" id="direccion" name="direccion" required>
-            </div>
+                        <label for="direccion">Direccion:</label>
+                        <input type="text" class="form-control" id="direccion" name="direccion" required>
+                    </div>
 
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" class="form-control" id="email" name="email" required>
             </div>
-
-            <div class="form-group">
-                <label for="celular">Celular:</label>
-                <input type="text" class="form-control" id="celular" name="celular" required>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="celular">Celular:</label>
+                        <input type="text" class="form-control" id="celular" name="celular" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="hora_cita">Hora de la cita:</label>
+                        <input type="time" class="form-control" id="hora_cita" name="hora_cita" required>
+                    </div>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="hora_cita">Hora de la cita:</label>
-                <input type="time" class="form-control" id="hora_cita" name="hora_cita" required>
-            </div>
+
 
             <div class="form-group">
                 <label for="consultorio">Consultorio:</label>
@@ -94,8 +100,8 @@
                 </select>
             </div>
             <br>
-            <button type ="Cancel" class= "btn btn-danger"> Cancelar</button>
-            <button type="submit" class="btn btn-success">Registrar</button>
+            <button type ="Cancel" class= "btn-success"> Cancelar</button>
+            <button type="submit" class="btn-danger">Registrar</button>
         </form>
     </div>
 
