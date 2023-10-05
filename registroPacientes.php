@@ -85,24 +85,42 @@
             </div>
 
 
-
-            <div class="form-group">
-                <label for="consultorio">Consultorio:</label>
-                <select class="form-control" id="consultorio" name="consultorio">
-                    <option selected>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>Terapias</option>
-                </select>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="consultorio">Consultorio:</label>
+                        <select class="form-control" id="consultorio" name="consultorio">
+                            <option selected>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>Terapias</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="prioridad">Prioridad:</label>
+                        <select class="form-control" id="prioridad" name="prioridad">
+                            <option selected>No prioritario</option>
+                            <option>Adulto Mayor</option>
+                            <option>Discapacitado</option>
+                            <option>Embarazada</option>
+                            <option>Niño en brazos</option>
+                        </select>
+                    </div>
+                </div>
             </div>
+
+
             <br>
-            <button type ="Cancel" class= "btn btn-danger"> Cancelar</button>
+
+            <button type="Cancel" class="btn btn-danger"> Cancelar</button>
             <button type="submit" class="btn btn-success" id="registro-paciente"  name="registro-paciente">Registrar</button>
-            
+
         </form>
     </div>
 
