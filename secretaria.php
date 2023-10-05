@@ -11,91 +11,96 @@
 </head>
 
 <body>
-    <ul class="nav justify-content-center fondo-azul">
-        <li class="nav-item">
-            <div class="container-fluid ">
-                <a class="navbar-brand center" href="#">
-                    <img src="img/logo-dark-omimed-2x.webp" alt="logo" width="250">
-                </a>
+    <!-- Encabezado con logotipo -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo-dark-omimed-2x.webp" alt="logo" width="250">
+            </a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2 class="text-center">Registro de Pacientes</h2>
+
+        <!-- Formulario de registro -->
+        <form action="connect.php" method="POST">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="nombres">Nombres:</label>
+                        <input type="text" class="form-control" id="nombres" name="nombres" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="apellidos">Apellidos:</label>
+                        <input type="text" class="form-control" id="apellidos" name="apellidos" required>
+                    </div>
+                </div>
             </div>
-        </li>
-    </ul>
-    <br>
-    <div>
-        <h2>Registro de pacientes</h2>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="tipo_doc">Tipo de Documento:</label>
+                        <select class="form-control" id="tipo_doc" name="tipo_doc">
+                            <option selected>C.C.</option>
+                            <option>T.I.</option>
+                            <option>R.C.</option>
+                            <option>Pasaporte</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="num_doc">Número de Documento:</label>
+                        <input type="text" class="form-control" id="num_doc" name="num_doc" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" class="form-control" id="direccion" name="direccion" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="celular">Celular:</label>
+                <input type="text" class="form-control" id="celular" name="celular" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hora_cita">Hora de la cita:</label>
+                <input type="time" class="form-control" id="hora_cita" name="hora_cita" required>
+            </div>
+
+            <div class="form-group">
+                <label for="consultorio">Consultorio:</label>
+                <select class="form-control" id="consultorio" name="consultorio">
+                    <option selected>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>Terapias</option>
+                </select>
+            </div>
+            <br>
+            <button type ="Cancel" class= "btn-cancel"> Cancelar</button>
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
     </div>
 
-    <form action="connect.php" method="POST">
-        <div class="container text-center">
-            <div class="row">
-                <div class="col">
-                    <label for="nombres">Nombres:</label><br>
-                    <input type="text" name="nombres" id="nombres" required /><br><br>
-                </div>
-                <div class="col">
-                <label for="apellidos">Apellidos:</label><br>
-        <input type="text" name="apellidos" id="apellidos" required /><br><br>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                <div class="form-group col-md-4">
-            <label for="tipo_doc">Tipo doc:</label><br>
-            <select id="tipo_doc" class="form-control" name="tipo_doc">
-                <option selected>C.C.</option>
-                <option>T.I.</option>
-                <option>R.C.</option>
-                <option>Pasaporte</option>
-            </select>
-        </div>
-                </div>
-                <div class="col">
-                <label for="num_doc">Num doc:</label><br>
-        <input type="text" name="num_doc" id="num_doc" required /><br><br>
-                </div>
+    <!-- Agrega aquí tus scripts JS si es necesario -->
 
-            </div>
-        </div>
-
-
-
-        
-
-        
-
-       
-
-        <label for="direccion">Dirección:</label><br>
-        <input type="text" name="direccion" id="direccion" required /><br><br>
-
-        <label for="email">Email:</label><br>
-        <input type="email" name="email" id="email" required /><br><br>
-
-        <label for="celular">Celular:</label><br>
-        <input type="text" name="celular" id="celular" required /><br><br>
-
-        <label for="hora_cita">Hora de la cita:</label><br>
-        <input type="time" name="hora_cita" id="hora_cita" required /><br><br>
-
-        <div class="form-group col-md-4">
-            <label for="consultorio">Consultorio:</label><br>
-            <select id="consultorio" class="form-control" name="consultorio">
-                <option selected>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>Terapias</option>
-            </select>
-        </div>
-
-        <input type="submit" name="submit" id="submit" />
-
-
-
-    </form>
 </body>
 
 </html>
