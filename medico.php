@@ -53,7 +53,7 @@
             die("Connection failed: " . $conn->connect_error);
         }
 
-        $sql = "SELECT nombres, apellidos, consultorio, hora_cita FROM pacientes";
+        $sql = "SELECT nombres, apellidos, consultorio, hora_cita FROM pacientes ORDER BY hora_cita";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {

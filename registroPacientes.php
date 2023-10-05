@@ -97,6 +97,20 @@
             <button type ="Cancel" class= "btn btn-danger"> Cancelar</button>
             <button type="submit" class="btn btn-success">Registrar</button>
         </form>
+        <div class="form-group">
+                <label for="prioridad">Consultorio:</label>
+                <select class="form-control" id="prioridad" name="prioridad">
+                    <option selected>Normal</option>
+                    <option>Adulto Mayor</option>
+                    <option>Discapacitado</option>
+                    <option>Embarazada</option>
+                    <option>Niño en brazos</option>
+                </select>
+            </div>
+            <br>
+            <button type ="Cancel" class= "btn btn-danger"> Cancelar</button>
+            <button type="submit" class="btn btn-success">Registrar</button>
+        </form>
     </div>
 
     <!-- Agrega aquí tus scripts JS si es necesario -->
