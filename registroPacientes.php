@@ -95,7 +95,8 @@
             </div>
             <br>
             <button type ="Cancel" class= "btn btn-danger"> Cancelar</button>
-            <button type="submit" class="btn btn-success">Registrar</button>
+            <button type="submit" class="btn btn-success" id="registro-paciente"  name="registro-paciente">Registrar</button>
+            
         </form>
     </div>
 
