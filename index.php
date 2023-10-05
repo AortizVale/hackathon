@@ -14,17 +14,30 @@
 <body class="fondo-azul-oscuro">
     <ul class="nav justify-content-center fondo-azul">
         <li class="nav-item">
-        <div class="container-fluid ">
-            <a class="navbar-brand center" href="#">
-                <img src="img/logo-dark-omimed-2x.webp" alt="logo" width="250">
-            </a>
-        </div>
+            <div class="container-fluid ">
+                <a class="navbar-brand center" href="#">
+                    <img src="img/logo-dark-omimed-2x.webp" alt="logo" width="250">
+                </a>
+            </div>
         </li>
     </ul>
     <br>
     <div class="container">
+        <?php
+        $conn = mysqli_connect('localhost', 'root', '', 'test1') or die("Connectionn Failed:" . mysqli_connect_error());
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        $sql_prioridad = "SELECT nombres, apellidos, consultorio, hora_cita, prioridad, estado FROM pacientes WHERE estado =0 ORDER BY prioridad = 'No prioritario', hora_cita";
+        $result = $conn->query($sql_prioridad);
+        ?>
+
+
+
         <div class="row">
-            
+
             <div class="col-md-7">
                 <table class="table table-striped ">
                     <thead>
@@ -35,46 +48,19 @@
                         </tr>
                     </thead>
                     <tbody class="crecer-uno">
-                        <tr class="table-success">
-                            <td>Paulina Ortega</td>
-                            <td>Consultorio 5</td>
-                            <td>Antonio Díaz</td>
-                        </tr>
-                        <tr>
-                            <td>Nelson Jaimes</td>
-                            <td>Consultorio 6</td>
-                            <td>Sandra Sarmiento</td>
-                        </tr>
-                        <tr>
-                            <td>Juan García</td>
-                            <td>Terapia</td>
-                            <td>Ana Rodríguez</td>
-                        </tr>
-                        <tr>
-                            <td>Carlos Pérez</td>
-                            <td>Consultorio 2</td>
-                            <td>Laura Martínez</td>
-                        </tr>
-                        <tr>
-                            <td>Isabel Silva</td>
-                            <td>Consultorio 3</td>
-                            <td>Diego Fernández</td>
-                        </tr>
-                        <tr>
-                            <td>Pedro Sánchez</td>
-                            <td>Consultorio 1</td>
-                            <td>María López</td>
-                        </tr>
-                        <tr>
-                            <td>Alejandro González</td>
-                            <td>Consultorio 4</td>
-                            <td>Andrea Fernández</td>
-                        </tr>
-                        <tr>
-                            <td>Luis Torres</td>
-                            <td>Consultorio 7</td>
-                            <td>Elena Ramírez</td>
-                        </tr>
+                        <?php
+                        if ($result->num_rows > 0) {
+                            $POSICION=0;
+                             while ($row = $result->fetch_assoc()) {
+                                $POSICION++;
+                        echo"<tr class='table-success'>
+                            <td>" . $row["nombres"]. " ". $row["apellidos"] . "</td>
+                            <td>" . $row["consultorio"] . "</td>
+                            <td>" . $POSICION . "</td>
+                            
+                        </tr>";
+                             }}
+                        ?>
                     </tbody>
                 </table>
             </div>

@@ -57,7 +57,7 @@
             die("Connection failed: " . $conn->connect_error);
         }
 
-        $sql_prioridad = "SELECT nombres, apellidos, consultorio, hora_cita, prioridad, estado FROM pacientes ORDER BY prioridad = 'No prioritario', hora_cita";
+        $sql_prioridad = "SELECT nombres, apellidos, consultorio, hora_cita, prioridad, estado, email FROM pacientes WHERE estado =0 ORDER BY prioridad = 'No prioritario', hora_cita";
         $result = $conn->query($sql_prioridad);
 
         
