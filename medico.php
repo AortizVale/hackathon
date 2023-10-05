@@ -49,7 +49,7 @@
                 <br>
             </div>
         </div>
-
+        <br>
         <?php
         $conn = mysqli_connect('localhost', 'root', '', 'test1') or die("Connectionn Failed:" . mysqli_connect_error());
         // Check connection
@@ -57,35 +57,16 @@
             die("Connection failed: " . $conn->connect_error);
         }
 
-        $sql_prioridad = "SELECT nombres, apellidos, consultorio, hora_cita, prioridad FROM pacientes ORDER BY prioridad = 'No prioritario', hora_cita";
+        $sql_prioridad = "SELECT nombres, apellidos, consultorio, hora_cita, prioridad, estado FROM pacientes ORDER BY prioridad = 'No prioritario', hora_cita";
         $result = $conn->query($sql_prioridad);
+
+        
 
         if ($result->num_rows > 0) {
             // output data of each row
             while ($row = $result->fetch_assoc()) {
-                if($row["prioridad"]=="No prioritario") 
-                {echo "<div class='container-text-center'>
-                    <div class='row'>
-                    <div class='col'>
-                        " . $row["nombres"] . " " . $row["apellidos"] . "
-                    </div>
-                    <div class='col'>
-                        " . $row["hora_cita"] . "
-                    </div>
-                    <div class='col'>
-                        " . $row["prioridad"] . "
-                    </div>
-                    <div class='col'>
-                        <button type='button' class='btn btn-success'>Llamar</button>
-                    </div>
-                    <div class='col'>
-                        <button type='button' class='btn btn-danger'>Quitar</button>
-                    </div>
-                    </div>
-                    </div>
-                    <br>";}
-                    else {
-                        echo "<div class='container-text-center-prioritario'>
+                $containerClass = ( $row["prioridad"] == "No prioritario") ? 'container-text-center' : 'container-text-center-prioritario';
+                echo "<div class='$containerClass'>
                     <div class='row'>
                     <div class='col'>
                         " . $row["nombres"] . " " . $row["apellidos"] . "
@@ -105,7 +86,6 @@
                     </div>
                     </div>
                     <br>";
-                    }
                 
             }
         } else {
