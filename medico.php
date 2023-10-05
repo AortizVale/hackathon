@@ -52,6 +52,7 @@
 
         <br>
         <?php
+        require 'email/indexx.php';
         $conn = mysqli_connect('localhost', 'root', '', 'test1') or die("Connectionn Failed:" . mysqli_connect_error());
         // Check connection
         if ($conn->connect_error) {
@@ -62,13 +63,13 @@
         $sql_prioridad = "SELECT nombres, apellidos, consultorio, hora_cita, prioridad, estado, email FROM pacientes WHERE estado =0 ORDER BY prioridad = 'No prioritario', hora_cita";
         $result = $conn->query($sql_prioridad);
 
-        
+
 
         if ($result->num_rows > 0) {
             // output data of each row
             while ($row = $result->fetch_assoc()) {
-                $containerClass = ( $row["prioridad"] == "No prioritario") ? 'container-text-center' : 'container-text-center-prioritario';
-                echo "<div class='$containerClass'>
+                $containerClass = ($row["prioridad"] == "No prioritario") ? 'container-text-center' : 'container-text-center-prioritario';
+                echo " <div class='$containerClass'>
                     <div class='row'>
                     <div class='col'>
                         " . $row["nombres"] . " " . $row["apellidos"] . "
@@ -81,7 +82,7 @@
                     </div>
                     
                     <div class='col'>
-                        <button id='botonllamar' type='button' class='btn btn-success'>Llamar</button>
+                    <button class='btn btn-success llamar-btn' data-email='" . $row["email"] . "'>Llamar</button>
                     </div>
                     <div class='col'>
                         <button type='button' class='btn btn-danger'>Quitar</button>
@@ -89,10 +90,8 @@
                     </div>
                     </div>
                     <br>";
-                }
-
             }
-         else {
+        } else {
             echo "0 results";
         }
         $conn->close();
@@ -102,13 +101,28 @@
 
 
         ?>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
-            document.getElementById("botonllamar").addEventListener("click", function() {
-                // Llama a la función para enviar el correo al hacer clic en el botón
-                enviarCorreo();
+    $(document).ready(function() {
+        $(".llamar-btn").click(function() {
+            // Obtener el valor del correo electrónico del botón
+            var email = $(this).data("email");
+            
+            // Realizar una solicitud AJAX a indexx.php y enviar el correo electrónico
+            $.ajax({
+                url: 'email/indexx.php',
+                method: 'POST',
+                data: { email: email }, // Enviar el correo electrónico como dato
+                success: function(response) {
+                    alert(response); // Muestra la respuesta del servidor (éxito o fallo)
+                },
+                error: function() {
+                    alert('Error en la solicitud AJAX');
+                }
             });
-        </script>
-
+        });
+    });
+</script>
 
 
 
