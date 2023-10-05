@@ -1,0 +1,20 @@
+{
+    "name": "pedro/commposerg",
+    "description": "composermail",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Pedro\\Commposerg\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pedro Martinez",
+            "email": "pmartinez752@unab.edu.co"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.8"
+    }
+}
