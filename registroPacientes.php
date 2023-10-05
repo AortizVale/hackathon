@@ -61,55 +61,65 @@
             </div>
 
             <div class="form-group">
-                <label for="direccion">Dirección:</label>
-                <input type="text" class="form-control" id="direccion" name="direccion" required>
-            </div>
+                        <label for="direccion">Direccion:</label>
+                        <input type="text" class="form-control" id="direccion" name="direccion" required>
+                    </div>
 
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" class="form-control" id="email" name="email" required>
             </div>
-
-            <div class="form-group">
-                <label for="celular">Celular:</label>
-                <input type="text" class="form-control" id="celular" name="celular" required>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="celular">Celular:</label>
+                        <input type="text" class="form-control" id="celular" name="celular" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="hora_cita">Hora de la cita:</label>
+                        <input type="time" class="form-control" id="hora_cita" name="hora_cita" required>
+                    </div>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="hora_cita">Hora de la cita:</label>
-                <input type="time" class="form-control" id="hora_cita" name="hora_cita" required>
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="consultorio">Consultorio:</label>
+                        <select class="form-control" id="consultorio" name="consultorio">
+                            <option selected>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>Terapias</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="prioridad">Prioridad:</label>
+                        <select class="form-control" id="prioridad" name="prioridad">
+                            <option selected>No prioritario</option>
+                            <option>Adulto Mayor</option>
+                            <option>Discapacitado</option>
+                            <option>Embarazada</option>
+                            <option>Niño en brazos</option>
+                        </select>
+                    </div>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="consultorio">Consultorio:</label>
-                <select class="form-control" id="consultorio" name="consultorio">
-                    <option selected>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>Terapias</option>
-                </select>
-            </div>
+
             <br>
-            <button type ="Cancel" class= "btn btn-danger"> Cancelar</button>
-            <button type="submit" class="btn btn-success">Registrar</button>
-        </form>
-        <div class="form-group">
-                <label for="prioridad">Consultorio:</label>
-                <select class="form-control" id="prioridad" name="prioridad">
-                    <option selected>Normal</option>
-                    <option>Adulto Mayor</option>
-                    <option>Discapacitado</option>
-                    <option>Embarazada</option>
-                    <option>Niño en brazos</option>
-                </select>
-            </div>
-            <br>
-            <button type ="Cancel" class= "btn btn-danger"> Cancelar</button>
-            <button type="submit" class="btn btn-success">Registrar</button>
+            <button type="Cancel" class="btn btn-danger"> Cancelar</button>
+            <button type="submit" class="btn btn-success" id="registro-paciente"  name="registro-paciente">Registrar</button>
         </form>
     </div>
 
