@@ -132,3 +132,11 @@ body {
     transform: scale(1.1);
     /* Escalar la imagen al pasar sobre ella */
 }
+
+.btn-btn-primary{
+    color: #0ede19;
+}
+
+.btn-cancel{
+    color: red;
+}

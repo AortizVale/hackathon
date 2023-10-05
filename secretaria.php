@@ -94,8 +94,8 @@
                 </select>
             </div>
             <br>
-            <button type ="Cancel" class= "btn-cancel"> Cancelar</button>
-            <button type="submit" class="btn btn-primary">Registrar</button>
+            <button type ="Cancel" class= "btn-success"> Cancelar</button>
+            <button type="submit" class="btn-danger">Registrar</button>
         </form>
     </div>
 

@@ -55,7 +55,7 @@
                 Quitar 
                 <br>
                 <br>
-                <button type="button" class="btn btn-danger">Quitar</button>
+                <button type="button" class="btn-btn-danger">Quitar</button>
             </div>
         </div>
     </div>
