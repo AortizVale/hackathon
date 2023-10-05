@@ -100,8 +100,9 @@
                 </select>
             </div>
             <br>
-            <button type ="Cancel" class= "btn-success"> Cancelar</button>
-            <button type="submit" class="btn-danger">Registrar</button>
+            <button type ="Cancel" class= "btn btn-danger"> Cancelar</button>
+            <button type="submit" class="btn btn-success" id="registro-paciente"  name="registro-paciente">Registrar</button>
+            
         </form>
     </div>
 
